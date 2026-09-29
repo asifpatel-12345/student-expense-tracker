@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Budget & Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎓 Student Budget Tracker</h1>
+
+        <!-- Dashboard Summary -->
+        <div class="dashboard">
+            <div class="card budget">
+                <h3>Total Budget</h3>
+                <p>₹<span id="total-budget">0</span></p>
+            </div>
+            <div class="card expenses">
+                <h3>Total Spent</h3>
+                <p>₹<span id="total-expense">0</span></p>
+            </div>
+            <div class="card balance">
+                <h3>Remaining</h3>
+                <p>₹<span id="remaining-balance">0</span></p>
+            </div>
+        </div>
+
+        <!-- Set Budget Section -->
+        <div class="section">
+            <h2>Set Monthly Budget</h2>
+            <form id="budget-form">
+                <input type="number" id="budget-input" placeholder="Enter Total Budget Amount (₹)" required>
+                <button type="submit">Set Budget</button>
+            </form>
+        </div>
+
+        <!-- Add Expense Section -->
+        <div class="section">
+            <h2>Add New Expense</h2>
+            <form id="expense-form">
+                <input type="text" id="expense-title" placeholder="Expense Title (e.g. Books, Bus)" required>
+                <input type="number" id="expense-amount" placeholder="Amount (₹)" required>
+                <select id="expense-category">
+                    <option value="Food">🍔 Food</option>
+                    <option value="Travel">🚌 Travel</option>
+                    <option value="Books">📚 Books & Study</option>
+                    <option value="Rent/Bills">🏠 Rent / Bills</option>
+                    <option value="Other">🎉 Entertainment / Other</option>
+                </select>
+                <button type="submit">Add Expense</button>
+            </form>
+        </div>
+
+        <!-- Expense History -->
+        <div class="section">
+            <h2>Expense History</h2>
+            <ul id="expense-list">
+                <!-- Expenses will be added here dynamically -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
